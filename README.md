@@ -9,7 +9,7 @@ This README covers, in order: what's in the repo, how to publish it on GitHub Pa
 ## 1. What's in this repo
 
 ```
-index.html, about.html, contact.html, track-shipment.html, 404.html   → top-level pages
+index.html, about.html, contact.html, 404.html                        → top-level pages
 services/                                                              → services hub + 7 service pages
 assets/css/styles.css                                                  → all site styling (one file)
 assets/js/main.js                                                      → nav, FAQ accordion, tracker demo

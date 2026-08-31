@@ -6,73 +6,6 @@ from templates import page, breadcrumb_schema
 from pages import write, cta_band, faq_block, check_items
 
 # ---------------------------------------------------------------------------
-# TRACK SHIPMENT
-# ---------------------------------------------------------------------------
-
-def build_track():
-    body = f"""
-<section class="page-hero" style="padding-bottom:170px">
-  <div class="container">
-    <div class="breadcrumbs"><a href="/">Home</a> / Track Shipment</div>
-    <h1>Track your shipment</h1>
-    <p class="lead">Enter the reference number from your booking confirmation or bill of lading to check status. For anything not showing here yet, your coordinator can pull a live update directly from the carrier.</p>
-  </div>
-</section>
-
-<section style="padding-top:0">
-  <div class="container">
-    <div class="tracker-box reveal">
-      <form id="tracker-form">
-        <label for="tracking-number">Tracking / booking reference</label>
-        <div class="tracker-row">
-          <input type="text" id="tracking-number" name="tracking-number" placeholder="e.g. MML-284719" required>
-          <button type="submit" class="btn btn-primary">{icon('search',18)} Track Shipment</button>
-        </div>
-        <p class="form-note">Reference numbers are provided in your booking confirmation email. Formats vary by mode (ocean / air) and carrier.</p>
-      </form>
-
-      <div class="tracker-result" id="tracker-result">
-        <p><strong>Reference:</strong> <span id="tracker-ref">MML-000000</span> &nbsp;·&nbsp; <span class="badge">{icon('truck',14)} In Transit</span></p>
-        <div class="timeline">
-          <div class="timeline-item done"><strong>Booking confirmed</strong><span>Carrier booking accepted, documentation issued.</span></div>
-          <div class="timeline-item done"><strong>Departed origin</strong><span>Cargo has left the origin port / airport.</span></div>
-          <div class="timeline-item current"><strong>In transit</strong><span>Currently moving toward destination — this is a sample status for demonstration.</span></div>
-          <div class="timeline-item"><strong>Arrived destination</strong><span>Pending.</span></div>
-          <div class="timeline-item"><strong>Delivered</strong><span>Pending.</span></div>
-        </div>
-        <p class="form-note">This tracker shows illustrative status while the live carrier-data connection is being configured. Contact your coordinator any time for a confirmed, real-time update.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="band-off">
-  <div class="container">
-    <div class="section-head center">
-      <span class="eyebrow">Need a Direct Answer</span>
-      <h2>Prefer to just ask?</h2>
-      <p class="lead">Your account coordinator can confirm status, ETA, and any exceptions directly.</p>
-    </div>
-    <div class="grid grid-3">
-      <div class="card text-center reveal"><div class="icon-tile" style="margin:0 auto 18px">{icon('phone',28)}</div><h3>Call</h3><p><a href="tel:{SITE['phone_href'].replace('tel:','')}">{SITE['phone_display']}</a></p></div>
-      <div class="card text-center reveal"><div class="icon-tile" style="margin:0 auto 18px">{icon('mail',28)}</div><h3>Email</h3><p><a href="mailto:{SITE['email']}">{SITE['email']}</a></p></div>
-      <div class="card text-center reveal"><div class="icon-tile" style="margin:0 auto 18px">{icon('clock',28)}</div><h3>Hours</h3><p>{SITE['hours']}</p></div>
-    </div>
-  </div>
-</section>
-"""
-    schema = [breadcrumb_schema([("Home", "/"), ("Track Shipment", "/track-shipment.html")])]
-    write("track-shipment.html", page(
-        title="Track a Shipment | Masmot Logistics",
-        description="Track your Masmot Logistics shipment by booking reference, or contact your coordinator directly for a confirmed real-time status update.",
-        path="/track-shipment.html",
-        body=body,
-        active="/track-shipment.html",
-        extra_schema=schema,
-    ))
-
-
-# ---------------------------------------------------------------------------
 # CONTACT
 # ---------------------------------------------------------------------------
 
@@ -141,11 +74,6 @@ def build_contact():
         <div class="contact-row"><div class="icon-tile">{icon('fax',22)}</div><div><strong>Fax</strong><span>{SITE['fax_display']}</span></div></div>
         <div class="contact-row"><div class="icon-tile">{icon('mail',22)}</div><div><strong>Email</strong><br><a href="mailto:{SITE['email']}">{SITE['email']}</a></div></div>
         <div class="contact-row"><div class="icon-tile">{icon('clock',22)}</div><div><strong>Hours</strong><span>{SITE['hours']}</span></div></div>
-        <div class="social-row">
-          <a href="{SITE['linkedin']}" aria-label="LinkedIn" target="_blank" rel="noopener">{icon('linkedin',18)}</a>
-          <a href="{SITE['twitter']}" aria-label="X" target="_blank" rel="noopener">{icon('twitter',18)}</a>
-          <a href="{SITE['facebook']}" aria-label="Facebook" target="_blank" rel="noopener">{icon('facebook',18)}</a>
-        </div>
       </div>
     </div>
   </div>
@@ -253,7 +181,6 @@ def build_legal():
 
 
 if __name__ == "__main__":
-    build_track()
     build_contact()
     build_404()
     build_legal()

@@ -63,20 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  /* Shipment tracker demo (front-end only — wire up to a real carrier/API later) */
-  var trackerForm = document.getElementById('tracker-form');
-  if (trackerForm) {
-    trackerForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var result = document.getElementById('tracker-result');
-      var input = document.getElementById('tracking-number');
-      var refEl = document.getElementById('tracker-ref');
-      if (refEl) refEl.textContent = input.value || 'MML-000000';
-      result.classList.add('show');
-      result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    });
-  }
-
   /* Contact form — submits to Formspree (https://formspree.io/f/mnpqjjwr) via fetch so the
      visitor stays on the page. If JS fails to run for any reason, the form still works: it
      falls back to a normal POST straight to Formspree, which shows its own confirmation page. */

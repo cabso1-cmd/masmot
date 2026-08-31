@@ -81,7 +81,8 @@ def services_grid(exclude_slug=None, cols=3):
     return f'<div class="grid grid-{cols}">' + "\n".join(cards) + "</div>"
 
 
-def cta_band(heading="Ready to move your next shipment?", sub="Tell us what you're shipping and where — we'll come back with routing and a quote.", primary=("Request a Quote", "/contact.html"), secondary=("Track a Shipment", "/track-shipment.html")):
+def cta_band(heading="Ready to move your next shipment?", sub="Tell us what you're shipping and where — we'll come back with routing and a quote.", primary=("Request a Quote", "/contact.html"), secondary=("View Services", "/services/")):
+    secondary_html = f'<a href="{secondary[1]}" class="btn btn-outline-light">{secondary[0]}</a>' if secondary else ""
     return f"""<div class="cta-band reveal">
       <div>
         <h2>{heading}</h2>
@@ -89,7 +90,7 @@ def cta_band(heading="Ready to move your next shipment?", sub="Tell us what you'
       </div>
       <div class="hero-cta" style="margin-top:0">
         <a href="{primary[1]}" class="btn btn-primary">{primary[0]} {icon('arrow-right',18)}</a>
-        <a href="{secondary[1]}" class="btn btn-outline-light">{secondary[0]}</a>
+        {secondary_html}
       </div>
     </div>"""
 
@@ -341,7 +342,7 @@ def build_services_hub():
 
 <section class="band-navy">
   <div class="container">
-    {cta_band(heading="Not sure which service you need?", sub="Describe the shipment and we'll map it to the right service — or combination of services.", primary=("Talk to Us", "/contact.html"), secondary=("Track a Shipment", "/track-shipment.html"))}
+    {cta_band(heading="Not sure which service you need?", sub="Describe the shipment and we'll map it to the right service — or combination of services.", primary=("Talk to Us", "/contact.html"), secondary=("Call Us", SITE['phone_href']))}
   </div>
 </section>
 """

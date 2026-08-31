@@ -13,9 +13,6 @@ SITE = {
     "address_line2": "Oakville, ON L6H 5V1, Canada",
     "address_full": "2150 Winston Park Dr, Unit 203, Oakville, ON L6H 5V1, Canada",
     "hours": "Mon–Fri, 8:30 AM–5:30 PM ET",
-    "linkedin": "https://www.linkedin.com/company/masmot-logistics",
-    "twitter": "https://x.com/masmotlogistics",
-    "facebook": "https://www.facebook.com/masmotlogistics",
 }
 
 # -- Icon library (24x24 stroke icons, currentColor) -------------------------
@@ -61,7 +58,6 @@ NAV_ITEMS = [
     ("Home", "/"),
     ("About", "/about.html"),
     ("Services", "/services/"),
-    ("Track Shipment", "/track-shipment.html"),
     ("Contact", "/contact.html"),
 ]
 

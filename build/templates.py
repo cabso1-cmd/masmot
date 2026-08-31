@@ -68,7 +68,6 @@ def organization_schema():
             "postalCode": "L6H 5V1",
             "addressCountry": "CA",
         },
-        "sameAs": [SITE["linkedin"], SITE["twitter"], SITE["facebook"]],
     }
 
 
@@ -140,7 +139,7 @@ def render_topbar():
     </div>
     <div class="topbar-links">
       <span>{icon('clock',14)} {SITE['hours']}</span>
-      <a href="/track-shipment.html">Track a Shipment</a>
+      <a href="/contact.html">Get a Quote</a>
     </div>
   </div>
 </div>"""
@@ -172,7 +171,6 @@ def render_header(active=""):
             {services_dropdown}
           </div>
         </li>
-        {nav_link('Track Shipment', '/track-shipment.html')}
         {nav_link('Contact', '/contact.html')}
       </ul>
     </nav>
@@ -192,11 +190,6 @@ def render_footer():
       <div class="footer-brand">
         <img src="/assets/img/logo-horizontal-white.svg" alt="{SITE['name']}" width="220" height="66">
         <p>Freight forwarding and ancillary logistics services, built around cargo that has to move on time, every time.</p>
-        <div class="social-row">
-          <a href="{SITE['linkedin']}" aria-label="Masmot Logistics on LinkedIn" target="_blank" rel="noopener">{icon('linkedin',18)}</a>
-          <a href="{SITE['twitter']}" aria-label="Masmot Logistics on X" target="_blank" rel="noopener">{icon('twitter',18)}</a>
-          <a href="{SITE['facebook']}" aria-label="Masmot Logistics on Facebook" target="_blank" rel="noopener">{icon('facebook',18)}</a>
-        </div>
       </div>
       <div>
         <h4>Services</h4>
@@ -209,7 +202,6 @@ def render_footer():
         <ul>
           <li><a href="/about.html">About Us</a></li>
           <li><a href="/services/">All Services</a></li>
-          <li><a href="/track-shipment.html">Track a Shipment</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
       </div>

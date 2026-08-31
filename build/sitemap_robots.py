@@ -10,7 +10,6 @@ URLS = [
     ("/", 1.0, "weekly"),
     ("/about.html", 0.8, "monthly"),
     ("/services/", 0.9, "weekly"),
-    ("/track-shipment.html", 0.7, "monthly"),
     ("/contact.html", 0.8, "monthly"),
 ] + [
     (f"/services/{s['slug']}.html", 0.85, "monthly") for s in SERVICES
