@@ -77,14 +77,54 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* Contact form (static hosting — routes to mailto by default; swap in Formspree/Cloudflare Worker as needed) */
+  /* Contact form — submits to Formspree (https://formspree.io/f/mnpqjjwr) via fetch so the
+     visitor stays on the page. If JS fails to run for any reason, the form still works: it
+     falls back to a normal POST straight to Formspree, which shows its own confirmation page. */
   var contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
       var note = document.getElementById('contact-form-note');
-      if (note) {
-        note.textContent = "Thanks — your email client will open to send this to operations@masmotlogistics.ca.";
-      }
+      var successPanel = document.getElementById('contact-form-success');
+      var submitBtn = contactForm.querySelector('button[type="submit"]');
+      var btnLabel = submitBtn ? submitBtn.querySelector('.btn-label') : null;
+
+      if (submitBtn) submitBtn.disabled = true;
+      if (btnLabel) btnLabel.textContent = 'Sending…';
+      if (note) { note.textContent = ''; }
+
+      var fallbackMessage = 'Something went wrong sending that — please email us directly at operations@masmotlogistics.ca.';
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' },
+      }).then(function (response) {
+        if (response.ok) {
+          contactForm.hidden = true;
+          if (successPanel) {
+            successPanel.hidden = false;
+            successPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          return;
+        }
+        // Non-OK response from Formspree (e.g. validation error) — try to surface its message,
+        // but never let a JSON-parsing failure escape as an unhandled/technical error.
+        return response.json().catch(function () { return null; }).then(function (data) {
+          if (note) {
+            note.textContent = (data && data.errors && data.errors.length)
+              ? data.errors.map(function (err) { return err.message; }).join(', ')
+              : fallbackMessage;
+          }
+        });
+      }).catch(function () {
+        // Network-level failure (offline, blocked, DNS, etc.) — always show the friendly
+        // message rather than the browser's raw "Failed to fetch" text.
+        if (note) { note.textContent = fallbackMessage; }
+      }).finally(function () {
+        if (submitBtn) submitBtn.disabled = false;
+        if (btnLabel) btnLabel.textContent = 'Send Enquiry';
+      });
     });
   }
 

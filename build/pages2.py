@@ -90,7 +90,9 @@ def build_contact():
   <div class="container">
     <div class="split reveal">
       <div>
-        <form id="contact-form" action="mailto:{SITE['email']}" method="post" enctype="text/plain">
+        <form id="contact-form" action="https://formspree.io/f/mnpqjjwr" method="POST">
+          <input type="hidden" name="_subject" value="New enquiry — Masmot Logistics website">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-grid">
             <div>
               <label for="name">Full name</label>
@@ -120,9 +122,17 @@ def build_contact():
               <textarea id="message" name="message" placeholder="Origin, destination, commodity, dimensions/weight, target dates..." required></textarea>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary" style="margin-top:18px">Send Enquiry {icon('arrow-right',18)}</button>
+          <button type="submit" class="btn btn-primary" style="margin-top:18px">
+            <span class="btn-label">Send Enquiry</span> {icon('arrow-right',18)}
+          </button>
           <p class="form-note" id="contact-form-note">We reply within one business day. For urgent shipments, please call us directly.</p>
         </form>
+        <div class="quote-card" id="contact-form-success" hidden style="border-top-color:#1E8A5F">
+          <p style="font-style:normal;color:#0F2A47;font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:8px">
+            <span style="color:#1E8A5F">{icon('check',22)}</span> Thanks — your enquiry is on its way.
+          </p>
+          <p class="mb-0" style="font-style:normal;color:#5B6B7C;font-size:0.95rem">We reply within one business day. For anything urgent, call us at <a href="tel:{SITE['phone_href'].replace('tel:','')}" style="color:#0F2A47;font-weight:600">{SITE['phone_display']}</a>.</p>
+        </div>
       </div>
       <div class="contact-info-card">
         <h3>Head Office</h3>

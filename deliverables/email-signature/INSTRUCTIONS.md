@@ -5,9 +5,7 @@ This folder contains:
 - **`aboo-signature.html`** — the signature itself, pre-filled with your name, title (Operations Manager), and Masmot Logistics contact details.
 - **`signature-preview.png`** — what it looks like, for reference.
 
-The signature's logo is linked to `https://masmotlogistics.ca/assets/img/signature/signature-icon.png`. That file is already included in the website package (under `assets/img/signature/`), so **once the website is live on masmotlogistics.ca, the logo will just work** — Outlook fetches it from your own domain, and it'll stay in sync automatically if you ever update the logo.
-
-If you want the signature working *before* the site is deployed, see "Using it before the site is live" below.
+The logo is embedded directly inside `aboo-signature.html` (as a data URI, not a link to a website), so it displays correctly as soon as you paste the signature into Outlook — it does **not** depend on masmotlogistics.ca being live. That's a deliberate change from an earlier version of this file, which linked to the not-yet-deployed site and showed a broken-image icon; if you already pasted that version into Outlook, re-copy from this updated file and paste again to replace it.
 
 ---
 
@@ -36,13 +34,6 @@ If you want the signature working *before* the site is deployed, see "Using it b
 5. Under **Default signatures**, assign it to your account for new messages and replies.
 
 ---
-
-## Using it before the site is live
-
-Until `masmotlogistics.ca` is deployed, the logo image won't load from its web address. Two options:
-
-1. **Fastest fix — do nothing.** Deploy the site first (see the main `README.md`), then install the signature — the logo will resolve correctly right away since the image ships as part of the site files.
-2. **Want it working today anyway?** In the signature editor, right-click the broken image icon → remove it, then use Outlook's **Insert Picture** button to insert `signature-icon.png` (found in `assets/img/signature/` in the website package) directly. Outlook will embed a local copy. Note: if you ever change the logo, you'll need to re-insert it manually with this method, whereas the linked version updates itself automatically.
 
 ## Editing your details later
 
