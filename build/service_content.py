@@ -1,0 +1,173 @@
+# -*- coding: utf-8 -*-
+"""Unique long-form content per service page — feeds SEO body copy."""
+
+SERVICE_CONTENT = {
+    "ocean-freight-forwarding": {
+        "meta_title": "Ocean Freight Forwarding Services | Masmot Logistics",
+        "meta_description": "FCL and LCL ocean freight forwarding from Masmot Logistics — carrier booking, documentation, and door-to-port or door-to-door moves on the major global trade lanes.",
+        "intro": "Whether you're moving a single 20' container or a recurring program of full-container-load volume, Masmot Logistics books, documents, and tracks your ocean freight from origin port to final destination. We work across major carrier alliances to secure space and competitive rates on the lanes that matter to your supply chain.",
+        "features": [
+            ("Full container load (FCL)", "Dedicated container bookings for 20', 40', and 40' high-cube equipment, with rate options across multiple carriers."),
+            ("Less than container load (LCL)", "Consolidated groupage for smaller shipments, so you're not paying for space you don't need."),
+            ("Door-to-door and door-to-port", "Inland haulage on both ends coordinated alongside the ocean leg, or handled as a single port-to-port move — your call."),
+            ("Booking & documentation", "Bill of lading, packing list, commercial invoice, and carrier booking confirmation handled and checked before cargo sails."),
+            ("Reefer container support", "Refrigerated container bookings coordinated with continuous temperature monitoring for perishable and sensitive cargo."),
+            ("Shipment visibility", "Sailing schedules, transhipment points, and estimated arrival dates communicated proactively, not just on request."),
+        ],
+        "process": [
+            ("Quote & booking", "Send your cargo details and lanes — we return carrier options and all-in pricing, then confirm the booking once you approve."),
+            ("Documentation", "We prepare and verify shipping documents so cargo isn't held at origin or destination for paperwork issues."),
+            ("Transit & tracking", "Sailing status and any exceptions (rollovers, transhipment delays) are flagged as they happen."),
+            ("Delivery & POD", "Cargo is released to your nominated consignee or trucker, with proof of delivery on file."),
+        ],
+        "faqs": [
+            ("What's the difference between FCL and LCL?", "FCL means your cargo has an entire container to itself — you pay for the container, not by volume. LCL means your cargo shares a container with other shippers' goods and you pay by cubic metre or weight, which suits smaller shipments that don't fill a full box."),
+            ("How far in advance should I book ocean freight?", "Space and equipment on popular lanes can tighten with little notice, so we recommend booking 2–4 weeks ahead of your required sailing where possible, longer during peak season (typically August–October on transpacific lanes)."),
+            ("Can you handle both the ocean leg and inland trucking?", "Yes — we arrange door-to-door moves that bundle origin trucking, ocean freight, and destination delivery into one coordinated shipment, or we can hand off at the port if you have your own trucking arranged."),
+        ],
+    },
+    "air-freight-forwarding": {
+        "meta_title": "Air Freight Forwarding Services | Masmot Logistics",
+        "meta_description": "Air freight forwarding for time-critical and high-value cargo. Consolidated, direct, and express air freight options from Masmot Logistics.",
+        "intro": "When a delay isn't an option, air freight closes the gap between production and delivery. Masmot Logistics arranges consolidated and direct air cargo bookings, prepares the documentation airlines require, and keeps you informed from tender to touchdown.",
+        "features": [
+            ("Consolidated air freight", "Cost-efficient groupage service for shipments that don't need a dedicated booking."),
+            ("Direct & charter options", "Dedicated space or charter arrangements when volume, weight, or deadlines call for it."),
+            ("Time-critical & next-flight-out", "Expedited bookings for cargo where the deadline is the deciding factor, not the rate."),
+            ("Perishable & temperature-sensitive cargo", "Cold chain coordination airside, including handling instructions for pharma and perishables."),
+            ("Dangerous goods handling", "DG documentation and packaging compliance handled by IATA-trained coordination for regulated cargo."),
+            ("Airport-to-airport or door-to-door", "Origin pickup and destination delivery arranged around the flight, not the other way around."),
+        ],
+        "process": [
+            ("Cargo details & routing", "Share dimensions, weight, and deadline — we return routing and airline options within hours."),
+            ("Airway bill & documentation", "Master and house airway bills, commercial invoice, and any DG or perishable paperwork prepared in advance."),
+            ("Flight tracking", "Uplift confirmation and any re-routes or flight changes communicated as they happen."),
+            ("Arrival & clearance handoff", "Cargo released at destination with documentation ready for customs clearance."),
+        ],
+        "faqs": [
+            ("How is air freight priced?", "Air freight is typically priced on chargeable weight — whichever is greater between actual weight and volumetric (dimensional) weight — plus applicable fuel and security surcharges."),
+            ("Can you move dangerous goods by air?", "Yes, provided the cargo is properly classified, packaged, and documented to IATA Dangerous Goods Regulations. Tell us the UN number and class as early as possible so we can confirm airline acceptance."),
+            ("What's the fastest option if a shipment is truly urgent?", "Next-flight-out service books the soonest available flight with space, prioritizing speed over cost — it's the option to ask for when the deadline can't move."),
+        ],
+    },
+    "customs-brokerage": {
+        "meta_title": "Customs Brokerage Support Services | Masmot Logistics",
+        "meta_description": "Import and export documentation support, tariff classification, and customs coordination from Masmot Logistics to keep cargo compliant and moving.",
+        "intro": "Cargo doesn't clear itself. Masmot Logistics prepares and checks the documentation your customs broker needs, coordinates tariff classification questions, and stays on top of import/export compliance so freight doesn't sit in a bonded warehouse waiting on paperwork.",
+        "features": [
+            ("Import/export documentation prep", "Commercial invoices, packing lists, certificates of origin, and permits checked for accuracy before submission."),
+            ("Tariff classification support", "HS code guidance coordinated with licensed brokers to reduce classification disputes and delays."),
+            ("Licensed broker coordination", "We work directly with licensed customs brokers on both sides of the border to keep your file moving."),
+            ("Bonded warehouse coordination", "Support for cargo requiring bonded storage pending clearance or duty payment."),
+            ("Duty & tax guidance", "Landed cost estimates that factor in duty, GST/HST, and applicable trade agreement preferences."),
+            ("Regulatory compliance checks", "OGD (other government department) requirements — CFIA, Health Canada, and similar — flagged before cargo arrives, not after."),
+        ],
+        "process": [
+            ("Pre-arrival review", "Documentation reviewed against destination requirements before cargo departs origin."),
+            ("Broker coordination", "Your file is handed to a licensed customs broker with everything they need to submit cleanly."),
+            ("Clearance monitoring", "We track clearance status and flag any holds, exams, or additional information requests immediately."),
+            ("Release & delivery", "Once released, cargo moves straight to final delivery or your nominated pickup."),
+        ],
+        "faqs": [
+            ("Is Masmot Logistics a licensed customs broker?", "We provide brokerage support — documentation preparation, classification guidance, and coordination — working alongside licensed customs brokers who hold the formal filing authority in each jurisdiction."),
+            ("What documents do I need for a customs clearance?", "At minimum: a commercial invoice, packing list, and bill of lading or airway bill. Depending on the goods, you may also need a certificate of origin, permits, or OGD certificates — we'll tell you exactly what applies to your shipment."),
+            ("What causes customs delays most often?", "Mismatched values between documents, vague product descriptions, and missing permits for regulated goods are the most common holds we see — all avoidable with a pre-arrival document review."),
+        ],
+    },
+    "ship-husbandry": {
+        "meta_title": "Ship Husbandry & Port Agency Services | Masmot Logistics",
+        "meta_description": "Port call coordination, crew change logistics, provisioning, and vessel agency support from Masmot Logistics while your vessel is in port.",
+        "intro": "A vessel in port is a vessel burning time and money until it sails again. Masmot Logistics coordinates port calls, crew changes, provisioning, and spares delivery so your ship's turnaround stays as short as the port allows.",
+        "features": [
+            ("Port call coordination", "Berth planning, agency appointment, and port authority liaison handled before the vessel arrives."),
+            ("Crew changes", "Immigration formalities, transport, and accommodation arranged for signing-on and signing-off crew."),
+            ("Provisioning & bunkering coordination", "Stores, provisions, and bunker fuel arranged and delivered to schedule."),
+            ("Spares & technical parts delivery", "Urgent spares tracked from supplier to vessel side, including customs formalities for in-transit parts."),
+            ("Husbandry disbursement accounts", "Transparent port disbursement accounts (PDAs/FDAs) so there are no surprises on the final invoice."),
+            ("Medical & welfare support", "Coordination for crew medical attention or welfare needs while alongside."),
+        ],
+        "process": [
+            ("Pre-arrival notice", "Vessel particulars and ETA received, agency and berth arrangements confirmed with the port."),
+            ("Alongside coordination", "Provisioning, crew changes, and spares delivery scheduled around cargo operations."),
+            ("Disbursement tracking", "All port costs logged against the PDA in real time, not reconciled after the fact."),
+            ("Sailing & final accounts", "Vessel cleared to sail with a final disbursement account issued promptly after departure."),
+        ],
+        "faqs": [
+            ("What is ship husbandry, exactly?", "Ship husbandry (or husbandry agency) covers the non-cargo services a vessel needs in port — crew changes, provisioning, bunkering coordination, spares delivery, and general port liaison — as opposed to cargo/protective agency work."),
+            ("Which ports do you cover?", "Contact us with your port of call and we'll confirm coverage and local agency arrangements — we work through an established network of port agents."),
+            ("How is husbandry billed?", "Through a port disbursement account (PDA) agreed before arrival and reconciled against actual costs on a final disbursement account (FDA) after sailing."),
+        ],
+    },
+    "temperature-controlled-warehousing": {
+        "meta_title": "Temperature-Controlled Warehousing | Masmot Logistics",
+        "meta_description": "Chilled and frozen warehousing with continuous monitoring from Masmot Logistics, protecting cold chain integrity from arrival to dispatch.",
+        "intro": "Some cargo can't tolerate a break in temperature, even briefly. Masmot Logistics coordinates chilled and frozen warehousing with continuous monitoring, so cold chain cargo stays within spec from the moment it's received to the moment it leaves for delivery.",
+        "features": [
+            ("Chilled storage (0–4°C)", "For fresh produce, dairy, and other refrigerated goods with tight temperature tolerances."),
+            ("Frozen storage (-18°C and below)", "Blast freezing and frozen storage for cargo that needs to stay hard-frozen through transit."),
+            ("Continuous temperature monitoring", "Logged temperature data available on request, so you have a record, not just an assurance."),
+            ("Cross-docking for cold cargo", "Minimal dwell time for cargo moving straight through to onward transport."),
+            ("Pharma & sensitive goods handling", "Handling protocols suited to pharmaceutical and other temperature-sensitive regulated cargo."),
+            ("Inventory & pick/pack support", "Basic inventory management for cargo held pending distribution instructions."),
+        ],
+        "process": [
+            ("Booking & pre-cool", "Storage space and temperature zone confirmed before cargo arrives, chamber pre-cooled if required."),
+            ("Receiving & QC check", "Cargo temperature checked and logged on arrival against agreed tolerances."),
+            ("Monitored storage", "Continuous monitoring throughout the storage period, with alerts on any excursion."),
+            ("Dispatch", "Cargo released for onward transport with a temperature record available on request."),
+        ],
+        "faqs": [
+            ("What temperature ranges can you accommodate?", "Chilled storage from roughly 0–4°C and frozen storage at -18°C and below are our standard ranges — tell us your product's specific tolerance and we'll confirm the right zone."),
+            ("Do you provide temperature records for compliance purposes?", "Yes — continuous monitoring data can be provided for shipments that need documented proof of cold chain integrity, such as pharmaceutical or export-certified cargo."),
+            ("Can you handle cross-docking for cold cargo?", "Yes, for cargo that's moving straight through to onward transport rather than sitting in storage, we can arrange cross-docking to minimize the time it spends off-temperature."),
+        ],
+    },
+    "project-cargo": {
+        "meta_title": "Project & Breakbulk Cargo Services | Masmot Logistics",
+        "meta_description": "Route surveys, heavy-lift, out-of-gauge, and breakbulk cargo planning from Masmot Logistics — project freight handled end to end.",
+        "intro": "Project cargo doesn't fit in a standard container, and it doesn't fit a standard process either. Masmot Logistics plans out-of-gauge, heavy-lift, and breakbulk moves by hand — route surveys, equipment selection, and permitting — for cargo where a mistake is expensive to undo.",
+        "features": [
+            ("Route & feasibility surveys", "Bridge heights, road widths, and turning radii checked before equipment is booked, not after."),
+            ("Heavy-lift & out-of-gauge cargo", "Flat rack, open top, and specialized equipment sourced for cargo that exceeds standard container dimensions."),
+            ("Breakbulk vessel booking", "Space booked on breakbulk vessels for cargo that isn't containerized at all."),
+            ("Permitting & escort coordination", "Oversize/overweight road permits and pilot car or escort requirements handled ahead of the move."),
+            ("Lifting & rigging plans", "Crane and rigging plans reviewed with your engineering team before cargo touches the crane hook."),
+            ("Multi-modal coordination", "Cargo sequenced across ocean, road, and rail legs as one coordinated plan, not separate bookings."),
+        ],
+        "process": [
+            ("Scope & survey", "Cargo specs and routing reviewed, with a route survey commissioned where the move demands one."),
+            ("Equipment & permitting", "Specialized equipment booked and permits filed with the relevant road and port authorities."),
+            ("Execution plan", "A written move plan covering lifting, transport, and sequencing is shared and confirmed before mobilization."),
+            ("Move day coordination", "Cargo movement supervised through loading, transport, and final positioning."),
+        ],
+        "faqs": [
+            ("What counts as project cargo?", "Generally, cargo that's too large, too heavy, or too irregularly shaped for standard container or general freight handling — think transformers, turbines, construction equipment, or modular structures."),
+            ("Do you handle the permits for oversize road moves?", "Yes — we coordinate oversize/overweight permitting and any required pilot car or escort arrangements with the relevant provincial and municipal authorities."),
+            ("How early should I involve you in a project cargo move?", "As early as possible — ideally before equipment is finalized. A route survey can influence what transport equipment is even viable, and that's much cheaper to learn early than after booking."),
+        ],
+    },
+    "cargo-insurance": {
+        "meta_title": "Cargo Insurance Services | Masmot Logistics",
+        "meta_description": "Marine cargo insurance placement from Masmot Logistics so your shipment's value is covered from origin to destination.",
+        "intro": "Carrier liability rarely covers what your cargo is actually worth. Masmot Logistics arranges marine cargo insurance placement so a shipment's full value — not the carrier's limited liability — is what's protected between origin and destination.",
+        "features": [
+            ("All-risk cargo coverage", "Coverage placed against physical loss or damage from external causes, for single shipments or annual programs."),
+            ("Named-perils coverage", "More targeted coverage where all-risk isn't required or appropriate for the cargo type."),
+            ("Annual open cover policies", "For regular shippers, a standing policy that covers shipments automatically as they move."),
+            ("High-value & project cargo coverage", "Coverage placed for cargo values and risk profiles that fall outside standard carrier liability limits."),
+            ("Claims support", "Assistance documenting and filing a claim if cargo is lost or damaged in transit."),
+            ("Certificate issuance", "Insurance certificates issued per shipment for buyers, banks, or letters of credit that require proof of cover."),
+        ],
+        "process": [
+            ("Coverage review", "Cargo value, commodity type, and route reviewed to recommend all-risk or named-perils coverage."),
+            ("Placement", "Coverage bound before cargo moves, with a certificate issued for your records."),
+            ("In-transit", "Coverage stays active across all legs of the journey as declared in the policy."),
+            ("Claims (if needed)", "If loss or damage occurs, we help document and submit the claim promptly."),
+        ],
+        "faqs": [
+            ("Isn't my cargo already covered by the carrier?", "Carrier liability is typically capped by international convention (for example, per package or per kilogram limits under the Hague-Visby or Montreal rules) — those limits are almost always far below a shipment's actual value. Cargo insurance covers the gap."),
+            ("What's the difference between all-risk and named-perils coverage?", "All-risk covers loss or damage from any external cause not specifically excluded in the policy. Named-perils coverage only responds to causes explicitly listed, such as fire or vessel sinking — it's narrower, and usually less expensive."),
+            ("Do I need a policy for every shipment, or can I cover a whole year at once?", "Both are available — single-shipment (voyage) policies for occasional shippers, or an annual open cover policy that automatically covers shipments as they move if you ship regularly."),
+        ],
+    },
+}

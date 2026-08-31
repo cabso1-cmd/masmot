@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Masmot Logistics icon">
+  <defs>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#123A63"/>
+      <stop offset="100%" stop-color="#0A2440"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Badge background -->
+  <rect x="0" y="0" width="512" height="512" rx="112" fill="url(#badgeGrad)"/>
+
+  <!-- Compass ring -->
+  <circle cx="256" cy="256" r="170" fill="none" stroke="#EAF1F8" stroke-opacity="0.9" stroke-width="20"/>
+
+  <!-- Cardinal ticks -->
+  <g fill="#EAF1F8" fill-opacity="0.9">
+    <rect x="246" y="62" width="20" height="34" rx="4"/>
+    <rect x="246" y="416" width="20" height="34" rx="4"/>
+    <rect x="62" y="246" width="34" height="20" rx="4"/>
+    <rect x="416" y="246" width="34" height="20" rx="4"/>
+  </g>
+
+  <!-- Forward dart / compass needle, breaking through the ring toward the northeast -->
+  <g transform="translate(256,256) rotate(-45)">
+    <polygon points="222,0 42,-92 96,0 42,92" fill="#F2A93B"/>
+  </g>
+
+  <!-- Small tail dot balancing the needle (southwest) -->
+  <circle cx="256" cy="256" r="14" fill="#F2A93B"/>
+</svg>

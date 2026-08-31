@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 665 200" width="665" height="200" role="img" aria-label="Masmot Logistics">
+  <!-- Reversed lockup for navy / dark backgrounds (footer, dark letterhead band) -->
+  <g transform="scale(0.390625)">
+    <circle cx="256" cy="256" r="170" fill="none" stroke="#FFFFFF" stroke-opacity="0.95" stroke-width="20"/>
+    <g fill="#FFFFFF" fill-opacity="0.95">
+      <rect x="246" y="62" width="20" height="34" rx="4"/>
+      <rect x="246" y="416" width="20" height="34" rx="4"/>
+      <rect x="62" y="246" width="34" height="20" rx="4"/>
+      <rect x="416" y="246" width="34" height="20" rx="4"/>
+    </g>
+    <g transform="translate(256,256) rotate(-45)">
+      <polygon points="222,0 42,-92 96,0 42,92" fill="#F2A93B"/>
+    </g>
+    <circle cx="256" cy="256" r="14" fill="#F2A93B"/>
+  </g>
+  <text x="228" y="112" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="76" fill="#FFFFFF" letter-spacing="0.5">MASMOT</text>
+  <text x="230" y="152" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-weight="500" font-size="30" fill="#F2A93B" letter-spacing="8">LOGISTICS</text>
+  <rect x="230" y="164" width="430" height="3" fill="#3C567A"/>
+  <text x="230" y="188" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-weight="400" font-size="17" fill="#AFC0D3" letter-spacing="3">FREIGHT FORWARDING &amp; LOGISTICS</text>
+</svg>
